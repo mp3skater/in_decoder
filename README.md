@@ -9,10 +9,10 @@
 --> Info: This project is an interesting school-exercise which I really like for its interesting usage in the real world (signal transmission, eg. bluetooth) :)
 
 **Added Features:**
-- 1. Random-binary-file-generator (the 0/1's are though accually written in ASCII 148/149)
-- 2. Incoder (inserts a parity-bit after every byte [➜ (what is a parity-bit?)](https://en.wikipedia.org/wiki/Parity_bit)).
-- 3. "Fehlerteufel" (inserts a given number of errors in the generated/incoded file)
-- 4. Decoder (returnes a pointer to the decoded file if no mistakes were found, otherwise NULL)
+- Random-binary-file-generator (the 0/1's are though accually written in ASCII 148/149)
+- Incoder (inserts a parity-bit after every byte [➜ (what is a parity-bit?)](https://en.wikipedia.org/wiki/Parity_bit)).
+- "Fehlerteufel" (inserts a given number of errors in the generated/incoded file)
+- Decoder (returnes a pointer to the decoded file if no mistakes were found, otherwise NULL)
 
 - Test programs for every module and one for the intire process
 - Makefile with all 
