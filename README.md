@@ -15,10 +15,10 @@
 - Decoder (returnes a pointer to the decoded file if no mistakes were found, otherwise NULL)
 
 - Test programs for every module and one for the intire process
-- Makefile with all 
+- Makefile for all programs 
 
 **In Future:**
-- Idk, I'd be already happy if it worked
+- Idk, I'd be already happy if it worked...
 
 ---
 
