@@ -10,7 +10,7 @@
 
 **Added Features:**
 - Random-binary-file-generator (the 0/1's are though accually written in ASCII 148/149)
-- Incoder (inserts a parity-bit after every byte [➜ (what is a parity-bit?)](https://en.wikipedia.org/wiki/Parity_bit)).
+- Incoder (inserts a parity-bit after every byte) [what is a parity-bit?](https://en.wikipedia.org/wiki/Parity_bit)
 - "Fehlerteufel" (inserts a given number of errors in the generated/incoded file)
 - Decoder (returnes a pointer to the decoded file if no mistakes were found, otherwise NULL)
 
@@ -24,7 +24,7 @@
 
 ## How to use
 
-To compile this program I'd recommend to use a linux distro with [➜gcc](https://www.gnu.org/software/gcc/), but you can also use [➜MinGW](https://www.mingw-w64.org/) for windows or an IDE like Vim/Emacs or VCS for Windows and MacOS.
+To compile this program I'd recommend to use a linux distro with [gcc](https://www.gnu.org/software/gcc/), but you can also use [MinGW](https://www.mingw-w64.org/) for windows or an IDE like Vim/Emacs or VCS for Windows and MacOS.
 The rules to compile the different Test-programs are in the makefile.
 
 ## License
