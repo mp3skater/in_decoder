@@ -9,7 +9,7 @@
 
 #define LEN 7 // Name of the generated file
 
-static const char NAME[] = "test_generator.txt";
+static const char * NAME = "test_generator.txt";
 /*
  * This test module generates the file using the generator.c module and prints it in the end to test the initial step of the program. 
  */
@@ -23,8 +23,8 @@ int main(void)
   text = fopen(NAME, "r");
   
   // Print file
-  char c;
-  while((c=fgets(text)) != EOF/*End Of File*/) {
-    printf("%c", c);
-  }
+  //char c;
+  //while((c=fgets(text, )) != EOF/*End Of File*/) {
+  //  printf("%c", c);
+  //}
 }
