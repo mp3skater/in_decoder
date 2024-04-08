@@ -12,22 +12,20 @@
 #include <stdlib.h>
 #include <time.h>
 
-int fgen(int n, char * path)
+char *fgen(int n, char *name)
 {
   FILE * text;
-  text = fopen(path, "w");
+  text = fopen(name, "w");
 
-  // Fehler
+  // Error
   if(text == NULL) {
     printf("Fehler beim lesen der Datei.");
-    return 1;
+    return NULL;
   }
 
   srand(time(NULL));
 
   int k = 0;
-
-  printf("here");
 
   while(k < 8*n) {
     // 0/1 || 50% each
@@ -36,8 +34,6 @@ int fgen(int n, char * path)
   }
   
   fclose(text);
-
-  printf("File has been generated correctly!");
 
   return 0;
 }

@@ -2,8 +2,8 @@
 
 CC = gcc
 CFLAGS = -Wall -Wextra -std=c11
-TARGET = myprogram
-SRC = generator.c test_generator.c # Add all your source files here
+TARGET = in_decoder.out
+SRC = generator.c incoder.c test.c # Add all your source files here
 OBJ = $(SRC:.c=.o)
 
 $(TARGET): $(OBJ)
@@ -17,3 +17,6 @@ run: $(TARGET)
 
 clean:
 	rm -f $(TARGET) $(OBJ)
+
+cleanall:
+	rm -f *.o *.txt *.out
