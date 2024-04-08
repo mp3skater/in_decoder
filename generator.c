@@ -1,18 +1,14 @@
 /*
- * Modul zur Überschreibung einer Datei mit zufälligen "1"en und "0"en
+ * Module: generator.c
  * Autor: mp3skater
- * Lizenz: MIT-License
- * Changelog:
- * 	2024/03/18 --> mp3skater: Initial commit
- * 	2
- *
+ * Lizenz: MIT License
  */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
-char *fgen(int n, char *name)
+FILE *fgen(int n, char *name)
 {
   FILE * text;
   text = fopen(name, "w");

@@ -3,7 +3,7 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -std=c11
 TARGET = in_decoder.out
-SRC = generator.c incoder.c test.c # Add all your source files here
+SRC = generator.c incoder.c fehler.c test.c # Add all your source files here
 OBJ = $(SRC:.c=.o)
 
 $(TARGET): $(OBJ)
