@@ -8,6 +8,7 @@
 #include "generator.h"
 #include "incoder.h"
 #include "fehler.h"
+#include "decoder.h"
 
 #define LEN 7 // Name of the generated file
 
@@ -31,7 +32,7 @@ int main(void)
   fehl(3, NAME2, NAME3);
 
   // Decoder
-
+  decode(NAME2, NAME3);
 
   return 0;
 }

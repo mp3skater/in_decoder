@@ -1,7 +1,6 @@
 /*
  * Module: incoder.c
  * Author: mp3skater
- * Version: 0.1
  * License: MIT License
  */
 

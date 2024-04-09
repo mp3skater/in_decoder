@@ -1,14 +1,14 @@
 /*
- * Module: fehler.c
+ * Module: decoder.c
  * Author: mp3skater
  * License: MIT License
  */
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
+#include <string.h>
 
-FILE* fehl(int count, char* orig_name, char* name)
+FILE* decode(char* orig_name, char* name)
 {
   FILE* orig_text;
   orig_text = fopen(orig_name, "r");
@@ -24,18 +24,13 @@ FILE* fehl(int count, char* orig_name, char* name)
   // Buffer: 8 chars + parity bit + null terminator
   char buf[10];
 
-  // Random variable
-  srand(time(NULL));
-
-  // Error counter
-  int errs = 0;
-
-  // Inserts <count> errors
   while(fgets(buf, sizeof(buf), orig_text) != NULL) {
-    if(errs < count)
-	    buf[rand()%8] ^= 1; // turn 1 into 0 and 0 into 1 in a random place somehow
-    fprintf(text, "%s", buf);
-    errs++;
+    int parity = (buf[0]+buf[1]+buf[2]+buf[3]+buf[4]+buf[5]+buf[6]+buf[7]-48*8) %2;
+    if(parity != buf[8]) {
+      printf("The file \"%s\" has a mistake!", orig_name);
+      return NULL;
+    }
+    fprintf(text, "%c%c%c%c%c%c%c%c", buf[0], buf[1], buf[2], buf[3], buf[4], buf[5], buf[6], buf[7]);
   }
 
   return text;
