@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <string.h>
 
-FILE *incode(char *orig_name, char *name)
+FILE* incode(char *orig_name, char *name)
 {
   FILE *orig_text;
   orig_text = fopen(orig_name, "r");

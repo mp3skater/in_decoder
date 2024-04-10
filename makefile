@@ -12,7 +12,7 @@ $(TARGET): $(OBJ)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $<
 
-run: $(TARGET) check
+run: $(TARGET)
 	./$(TARGET)
 
 check:
