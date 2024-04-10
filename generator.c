@@ -31,5 +31,5 @@ FILE *fgen(int n, char *name)
   
   fclose(text);
 
-  return 0;
+  return text;
 }

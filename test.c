@@ -32,7 +32,7 @@ int main(void)
   fehl(3, NAME2, NAME3);
 
   // Decoder
-  decode(NAME2, NAME3);
+  decode(NAME3, NAME4);
 
   return 0;
 }
