@@ -5,13 +5,14 @@
  * Inserts <count> errors in the given file. Attention, if file has less then <count>*9 chars all errors may not be inserted.
  *
  * Parameter:
- * 1: count of errors
- * 2: original incoded file name
- * 3: new file name
+ * 1: count of errors.
+ * 2: original incoded file name.
+ * 3: new file name.
  *
  * Return:
- * Pointer to the generated file.
+ * 0: Operation successful.
+ * 1: Error while creating/reading a file.
  */
-FILE* fehl(int, char*, char*);
+int fehl(int, char*, char*);
 
 #endif

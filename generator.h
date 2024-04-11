@@ -2,15 +2,16 @@
 #define __GENERATOR_H__
 
 /*
- * Generates a file with a certain filesize(8*n) with random 0(ASCII: 48) or 1(ASCII: 49)
+ * Generates a file with a certain filesize(8*n*sizeof(char)) with random 0(ASCII: 48) or 1(ASCII: 49)
  *
  * Parameter:
- * 1. Anzahl der Bytes an größe der Datei.
- * 2. Name der Datei die erstellt wird in der cwd.
+ * 1. Number of "bytes" of the file.
+ * 2. Name of the file that will be generated in the current directory.
  *
  * Return:
- * Pointer to the incoded file.
+ * 0: Opration successful.
+ * 1: Error while creating the file.
  */
-FILE* fgen(int, char*);
+int fgen(int, char*);
 
 #endif
