@@ -15,7 +15,7 @@
 - Decoder (returnes a pointer to the decoded file if no mistakes were found, otherwise NULL)
 
 - Test programs for every module and one for the intire process
-- Makefile for all programs 
+- Makefile for all programs and check rule
 
 **In Future:**
 - Idk, I'd be already happy if it worked...
