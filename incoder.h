@@ -2,7 +2,7 @@
 #define __INCODER_H__
 
 /*
- * Creates a file where after every 8th char there gets inserted a parity-bit.
+ * Creates a file where 8 chars get printed three times. ~~~ NOT GOOD ENGLISH, PLS LOOK AGAIN AT IT
  *
  * Parameter:
  * 1: Name of the original file.

@@ -24,8 +24,8 @@ int fehl(int count, char* orig_name, char* name)
     return 1;
   }
 
-  // Buffer: 8 chars + parity bit + null terminator
-  char buf[10];
+  // Buffer: 8 chars + null terminator
+  char buf[9];
 
   // Random init
   srand(time(NULL));

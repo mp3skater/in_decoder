@@ -2,7 +2,7 @@
 #define __FEHLER_H__
 
 /*
- * Inserts <count> errors in the given file. Attention, if file has less then <count>*9 chars all errors may not be inserted.
+ * Inserts <count> errors in the given file. Attention, if file has less then <count>*8 chars all errors may not be inserted.
  *
  * Parameter:
  * 1: count of errors.

@@ -25,25 +25,23 @@ FILE* decode(char* orig_name, char* name)
     return NULL;
   }
 
-  // Buffer: 8 chars + parity bit + null terminator
-  char buf[10];
+  // Buffer: 3 * 8 chars + null terminator
+  char buf[25];
 
   // Copy the non-redundant part of the file in the new one
   while(fgets(buf, sizeof(buf), orig_text) != NULL) {
-    // Calculate parity-bit
-    int parity = (buf[0]+buf[1]+buf[2]+buf[3]+buf[4]+buf[5]+buf[6]+buf[7]-48*8) %2;
-
-    // Oboardif the parity-bit signals a mistake
-    if(parity != buf[8]) {
-      printf("The file \"%s\" has a mistake!\n", orig_name);
-
-      // Unlinking file
-      //fclose(text);
-      //unlink(text);
-
-      return NULL;
+    // Every "bit" of the "byte"
+    for(int i = 0; i<8; i++) {
+      // All three versions of the bit
+      if(buf[i]+buf[i+8]+buf[i+16]-144 > 1) { // ~~~ I THINK CAN BE WRITTEN MORE EFFICIENTLY!!! RELOOK PLS
+        // 2 or more ones
+	fprintf(text, "1");
+      }
+      else {
+        // 2 or more zeros
+        fprintf(text, "0");
+      }
     }
-    fprintf(text, "%c%c%c%c%c%c%c%c", buf[0], buf[1], buf[2], buf[3], buf[4], buf[5], buf[6], buf[7]);
   }
 
   // Very important: close the files

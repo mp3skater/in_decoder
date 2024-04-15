@@ -28,8 +28,7 @@ int incode(char *orig_name, char *name)
 
   // Read 8 chars at a time and insert parity-bit
   while(fgets(buf, sizeof(buf), orig_text) != NULL) {
-    int parity = (buf[0]+buf[1]+buf[2]+buf[3]+buf[4]+buf[5]+buf[6]+buf[7]-48*8) %2; 
-    fprintf(text, "%s%c", buf, 48+parity);
+    fprintf(text, "%s%s%s", buf, buf, buf);
   }
 
   // Very important: Close the files
