@@ -17,9 +17,13 @@ run: $(TARGET)
 
 check:
 	cat test_generator.txt
+	:
 	cat test_incoder.txt
+	:
 	cat test_fehler.txt
+	:
 	cat test_decoder.txt
+	:
 
 clean:
 	rm -f $(TARGET) $(OBJ)

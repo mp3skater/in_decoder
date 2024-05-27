@@ -10,7 +10,7 @@
 #include "fehler.h"
 #include "decoder.h"
 
-#define LEN 7 // Name of the generated file
+#define LEN 1 // Name of the generated file
 
 static char* NAME1 = "test_generator.txt";
 static char* NAME2 = "test_incoder.txt";
